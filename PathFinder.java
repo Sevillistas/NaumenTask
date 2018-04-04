@@ -59,9 +59,9 @@ public class PathFinder
                     sumLength[p.Y_coord][p.X_coord+1]=sumLength[p.Y_coord][p.X_coord]+1;
                     isChecked[p.Y_coord][p.X_coord+1]=true;
                     s.add(new Point(p.Y_coord, p.X_coord+1));
-                    PathFinder.PrintInt(numArray,array.length, array[0].length);
+                    /*PrintInt(numArray,array.length, array[0].length); //раскомментируйте, если необходимо пошагово отследить измения состояний массивов
                     System.out.println();
-                    PathFinder.PrintInt(sumLength,array.length, array[0].length);
+                    PrintInt(sumLength,array.length, array[0].length);*/
                 }
             }
             if(p.Y_coord-1 >= 0 && isChecked[p.Y_coord - 1][p.X_coord]==false)
@@ -72,9 +72,9 @@ public class PathFinder
                     sumLength[p.Y_coord-1][p.X_coord]=sumLength[p.Y_coord][p.X_coord]+1;
                     isChecked[p.Y_coord - 1][p.X_coord]=true;
                     s.add(new Point(p.Y_coord - 1, p.X_coord));
-                    PathFinder.PrintInt(numArray,array.length, array[0].length);
+                    /*PrintInt(numArray,array.length, array[0].length); //раскомментируйте, если необходимо пошагово отследить измения состояний массивов
                     System.out.println();
-                    PathFinder.PrintInt(sumLength,array.length, array[0].length);
+                    PrintInt(sumLength,array.length, array[0].length);*/
                 }
             }
             if(p.X_coord-1 >=0 && isChecked[p.Y_coord][p.X_coord - 1] == false)
@@ -85,9 +85,9 @@ public class PathFinder
                     sumLength[p.Y_coord][p.X_coord-1]=sumLength[p.Y_coord][p.X_coord]+1;
                     isChecked[p.Y_coord][p.X_coord - 1] = true;
                     s.add(new Point(p.Y_coord, p.X_coord - 1));
-                    PathFinder.PrintInt(numArray,array.length, array[0].length);
+                    /*PrintInt(numArray,array.length, array[0].length); //раскомментируйте, если необходимо пошагово отследить измения состояний массивов
                     System.out.println();
-                    PathFinder.PrintInt(sumLength,array.length, array[0].length);
+                    PrintInt(sumLength,array.length, array[0].length);*/
                 }
             }
             if (p.Y_coord+1 < array.length && isChecked[p.Y_coord+1][p.X_coord] == false)
@@ -98,9 +98,9 @@ public class PathFinder
                     sumLength[p.Y_coord+1][p.X_coord]=sumLength[p.Y_coord][p.X_coord]+1;
                     isChecked[p.Y_coord+1][p.X_coord] = true;
                     s.add(new Point(p.Y_coord + 1, p.X_coord));
-                    PathFinder.PrintInt(numArray,array.length, array[0].length);
+                    /*PrintInt(numArray,array.length, array[0].length); //раскомментируйте, если необходимо пошагово отследить измения состояний массивов
                     System.out.println();
-                    PathFinder.PrintInt(sumLength,array.length, array[0].length);
+                    PrintInt(sumLength,array.length, array[0].length);*/
                 }
             }
             if(isChecked[exit.Y_coord][exit.X_coord]==true) //если достигнута клетка выхода
